@@ -1,6 +1,6 @@
 # The URL the site will be built for
 # base_url = "/"
-base_url = "https://myxogastria0808.github.io/nyoki/"
+base_url = "https://sohosai.github.io/travel/"
 
 # The site title and description; used in feeds by default.
 title = "jsys travel blog"
