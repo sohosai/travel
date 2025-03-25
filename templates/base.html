@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block rss %}<link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{{ get_url(path="rss.xml", trailing_slash=false) | safe }}">{%
+    endblock %}
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!--TODO: favicon.icoをstaticディレクトリに設置-->
+    <meta name="theme-color" content="rgb(15.29, 15.29, 15.29)" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!--Google Fonts-->
+    <!--css-->
+    <link rel="stylesheet" href="{{
+    get_url(path="base.css",trailing_slash=false) | safe }}">
+    <!--css-->
+    <!--og setting-->
+    <meta property="og:title" content="Ultra-Coins" />
+    <meta name="keyword" content="jsys, 雙峰祭, 局旅行, 筑波大学" />
+    <meta property="og:description" content="jsys局旅行のブログサイトです。" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image" content="" />
+    <!--TODO: 画像もらう-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <!--TODO: URLは後で入れる-->
+    <!--og setting-->
+    <!--katex-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.css"
+      integrity="sha384-7lU0muIg/i1plk7MgygDUp3/bNRA65orrBub4/OSWHECgwEsY83HaS1x3bljA/XV"
+      crossorigin="anonymous"
+    />
+    <!--katex-->
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.js"
+      integrity="sha384-RdymN7NRJ+XoyeRY4185zXaxq9QWOOx3O7beyyrRK4KQZrPlCDQQpCu95FoCGPAE"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/contrib/auto-render.min.js"
+      integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+    <!--katex-->
+    <title>jsys局旅行</title>
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <a href="/" class="title">jsys局旅行</a>
+    </header>
+    <!--header-->
+    {% block content %} {% endblock %}
+    <!--footer-->
+    <footer>
+      <p class="credit">
+        <a href="https://sohosai.com">
+          © <span id="year"></span> Designed and Created by: jsys24
+          (Myxogastria0808)
+        </a>
+      </p>
+    </footer>
+    <!--footer-->
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "light" });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

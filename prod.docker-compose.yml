@@ -1,0 +1,9 @@
+services:
+  jsys-travel-blog:
+    image: ghcr.io/myxogastria0808/nyoki/blog:main
+    container_name: jsys-travel-blog
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:80"

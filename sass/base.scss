@@ -1,0 +1,419 @@
+//* base settings *//
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #d8d8d8;
+  * {
+    color: #000000;
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* header */
+  .header {
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 30px 0 30px 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 30.5px;
+    .title {
+      padding: 0;
+      margin: 0 0 0 30px;
+      font-size: 1.3em;
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
+  /* footer */
+  footer {
+    margin: auto 0 0 0;
+    padding: 0;
+    background-color: #d8d8d8;
+    box-shadow:11px 11px 22px #c7c7c7,
+    -11px -11px 22px #f8f8f8;
+    height: 150px;
+    .credit {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+//* First View *//
+.first-view {
+  margin-top: -90.5px;
+  background-image: url("first-view/sample.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100lvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title {
+    color: #ffffff;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+  }
+  .subtitle {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+//* 局旅行紹介 *//
+.about-section {
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 70px 0 10px 0;
+  }
+  .subtitle {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .content {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+
+//* jsys局旅行 Blog list *//
+.blog-list-section {
+  height: 100lvh;
+  width: 100%;
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 70px 0 30px 0;
+  }
+  .tag-list {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 0 30px 0;
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    li {
+      margin: 20px 0 20px 0;
+      overflow: visible;
+      padding: 20px;
+      box-shadow:11px 11px 22px #c7c7c7,
+      -11px -11px 22px #f8f8f8;
+      overflow-wrap: anywhere;
+      .post-link {
+        text-decoration: none;
+        h2 {
+          font-size: 1.7em;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          text-decoration: underline;
+        }
+        .date, .author {
+          font-size: 0.9em;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .tags {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+//* jsys局旅行 Post Page *//
+.blog-page-section {
+  padding: 0;
+  margin: 0;
+  background-color: #d8d8d8;
+  .blog-content {
+    display: flex;
+    width: 100%;
+    max-width: 1160px;
+    margin: 30px auto 0 auto;
+    .toc-box {
+      margin: 150px 20px 0 50px;
+      padding: 10px 0 10px 0;
+      width: 300px;
+      height: 400px;
+      box-shadow:11px 11px 22px #c7c7c7,
+      -11px -11px 22px #f8f8f8;
+      overflow-y: scroll;
+      overflow-x: visible;
+      position: sticky;
+      top: 20px;
+      font-size: 1.15em;
+    }
+    .blog-container {
+      flex: 1;
+      padding: 0 20px 20px 20px;
+      box-shadow:11px 11px 22px #c7c7c7,
+      -11px -11px 22px #f8f8f8;
+      .blog-title {
+        text-align: center;
+      }
+      .blog-meta {
+        text-align: center;
+        span {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+    }
+    /* mobile */
+    @media screen and (max-width: 1010px) {
+      .toc-box {
+        display: none;
+      }
+      .blog-container {
+        margin: 0;
+      }
+    }
+    /* PC */
+    @media screen and (min-width: 1011px) {
+      .blog-container {
+        max-width: 760px;
+        margin: 0 0 130px 20px;
+      }
+    }
+  }
+  .blog-config {
+    font-family: "Sawarabi Gothic", serif;
+    h1 {
+      font-size: 2.5em;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: 1.8em;
+      font-weight: 400;
+    }
+    h4 {
+      font-size: 1.6em;
+      font-weight: 400;
+    }
+    h5 {
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+    h6 {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+    p {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+    blockquote {
+      background-color: #c5c5c5;
+      margin: 0;
+      padding: 5px 10px;
+      border-left: #9b9b9b 5px solid;
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    pre {
+      padding: 15px;
+      border-radius: 7.5px;
+      background-color: #dedede !important;
+    }
+  }
+}
+
+//* jsys局旅行 Blog list *//
+.blog-list-page-section {
+  height: 100lvh;
+  width: 100%;
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 70px 0 50px 0;
+  }
+  .tag-list {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 0 30px 0;
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    li {
+      margin: 20px 0 20px 0;
+      overflow: visible;
+      padding: 20px;
+      box-shadow:11px 11px 22px #c7c7c7,
+      -11px -11px 22px #f8f8f8;
+      overflow-wrap: anywhere;
+      .post-link {
+        text-decoration: none;
+        h2 {
+          font-size: 1.7em;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          text-decoration: underline;
+        }
+        .date, .author {
+          font-size: 0.9em;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .tags {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+//* jsys局旅行 Blog Tag list *//
+.tag-list-page-section {
+  height: 100lvh;
+  width: 100%;
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin: 70px 0 50px 0;
+  }
+  .ul-wrapper {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+      overflow-x: visible;
+      li {
+        margin: 30px 0 30px 0;
+        a {
+          text-decoration: none;
+          div {
+            overflow-wrap: anywhere;
+            padding: 0 20px 5px 20px;
+            box-shadow:11px 11px 22px #c7c7c7,
+            -11px -11px 22px #f8f8f8;
+            h2 {
+              font-size: 1.7em;
+              margin: 0;
+              padding: 20px 0 20px 0;
+            }
+            p {
+              font-size: 0.9em;
+              margin: 0;
+              padding: 0;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//* 404 Page *//
+.error-page-section {
+  height: 100lvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    margin-top: -90.5px;
+  }
+  .statuscode {
+    font-size: 7em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .status-message {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+  }
+  .link {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+//* Shortcodes *//
+.alert-type {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px 0;
+}
+.alert-type-label {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+.note {
+  background-color: #0a68da80;
+}
+.tip {
+  background-color: #187f3280;
+}
+.important {
+  background-color: #7f4edf80;
+}
+.warning {
+  background-color: #98650180;
+}
+.caution {
+  background-color: #d0212b80;
+}
+.img-box {
+  width: fit-content;
+  margin: 0 auto;
+}
+.caption {
+  margin: 0;
+  padding: 5px 0 0 0;
+  font-size: 0.8em;
+  text-align: center;
+  color: #d0d0d0;
+}

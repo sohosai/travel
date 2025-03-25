@@ -1,0 +1,9 @@
+services:
+  jsys-travel-blog:
+    image: jsys-travel-blog
+    container_name: jsys-travel-blog
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:80"
