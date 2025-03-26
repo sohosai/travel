@@ -30,7 +30,7 @@ tags = ["jsys24", "グルメ"]
 >
 > **※すでに存在しているタグの別名表記を追加するのは、やめてください。**
 >
-> [TAG_LIST.mdのリンク](https://github.com/ultra-coins/ultra-coins-blog/blob/main/TAG_LIST.md)
+> [TAG_LIST.mdのリンク](https://github.com/sohosai/travel/blob/main/TAG_LIST.md)
 
 > [!WARNING]
 > すでに存在するディレクトリ名は使用できません。
@@ -57,7 +57,7 @@ fn main() {
 ```
 ````
 
-![codeblock](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/codeblock.png)
+![codeblock](https://github.com/sohosai/travel/blob/main/assets/codeblock.png)
 
 ### 画像
 
@@ -77,7 +77,7 @@ image は、`width=int`,`height=int`,`caption=String`をそれぞれオプショ
 {{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="captionの例") }}
 ```
 
-![image](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/image.png)
+![image](https://github.com/sohosai/travel/blob/main/assets/image.png)
 
 > [!NOTE]
 > 画像は自動で webp に変換されるはずなので、画像サイズは気にしなくて良いです。
@@ -98,7 +98,7 @@ $$
 $$
 ```
 
-![katex](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/katex.png)
+![katex](https://github.com/sohosai/travel/blob/main/assets/katex.png)
 
 ### mermaid
 
@@ -122,7 +122,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![marmaid](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/marmaid.png)
+![marmaid](https://github.com/sohosai/travel/blob/main/assets/marmaid.png)
 
 ### note
 
@@ -140,7 +140,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![note](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/note.png)
+![note](https://github.com/sohosai/travel/blob/main/assets/note.png)
 
 ### tip
 
@@ -158,7 +158,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![tip](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/tip.png)
+![tip](https://github.com/sohosai/travel/blob/main/assets/tip.png)
 
 ### important
 
@@ -176,7 +176,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![important](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/important.png)
+![important](https://github.com/sohosai/travel/blob/main/assets/important.png)
 
 ### warning
 
@@ -194,7 +194,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![warning](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/warning.png)
+![warning](https://github.com/sohosai/travel/blob/main/assets/warning.png)
 
 ### caution
 
@@ -212,7 +212,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 ```
 
-![caution](https://github.com/ultra-coins/ultra-coins-blog/blob/main/assets/caution.png)
+![caution](https://github.com/sohosai/travel/blob/main/assets/caution.png)
 
 ## 使用した SSG
 
