@@ -16,7 +16,9 @@
 </section>
 <section class="blog-list-section">
   <h1 class="title">ブログ記事一覧</h1>
-  <a href="/tags" class="tag-list">タグ一覧はこちらから</a>
+  <a href="{{ config.base_url }}/travel/tags" class="tag-list"
+    >タグ一覧はこちらから</a
+  >
   <ul>
     {%for page in section.pages %}
     <li>
@@ -31,10 +33,13 @@
       </a>
       <p class="tags">
         {% for tag in page.taxonomies.tags %} {% if loop.last %}
-        <a href="/tags/{{ tag | safe }}/">#{{ tag | safe }}</a>
+        <a href="{{ config.base_url }}/travel/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >
         {%else %}
-        <a href="/tags/{{ tag | safe }}/">#{{ tag | safe }}</a>,&ensp; {% endif
-        %} {% endfor %}
+        <a href="{{ config.base_url }}/travel/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >,&ensp; {% endif %} {% endfor %}
       </p>
     </li>
     {% endfor %}

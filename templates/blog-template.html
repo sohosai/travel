@@ -6,17 +6,20 @@
       <h1 class="blog-title">{{ page.title | safe }}</h1>
       <p class="blog-meta">
         {% for tag in page.taxonomies.tags %}{% if loop.last %}
-        <a href="/tags/{{ tag | safe }}/">#{{ tag | safe }}</a>
+        <a href="{{ config.base_url }}/travel/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >
         {%else %}
-        <a href="/tags/{{ tag | safe }}/">#{{ tag | safe }}</a>,&ensp; {% endif
-        %} {% endfor %}
+        <a href="{{ config.base_url }}/travel/tags/{{ tag | safe }}/"
+          >#{{ tag | safe }}</a
+        >,&ensp; {% endif %} {% endfor %}
       </p>
       <p class="blog-meta">
         公開日:&ensp;{{ page.date | safe }}&emsp;&emsp;作成者:&ensp;{%for author
         in page.authors %} {% if loop.last %}{{ author | safe }}{% else %}{{
         author | safe }},&ensp;{% endif %}{% endfor %}
       </p>
-      <p><a href="/">ブログ記事一覧に戻る</a></p>
+      <p><a href="{{ config.base_url }}/travel/">ブログ記事一覧に戻る</a></p>
       {{ page.content | safe }}
     </div>
     <!--main content-->
