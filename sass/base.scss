@@ -12,7 +12,7 @@ body {
   }
   /* loading */
   #loading {
-    transition: all 2s; /*ローディングにかかる時間*/
+    transition: all 2s;
     background-color: #1EB8CB;
     z-index: 100;
     position: fixed;
@@ -41,7 +41,6 @@ body {
   /* header */
   .header {
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0);
     padding: 30px 0 30px 0;
     width: 100%;
     position: relative;
