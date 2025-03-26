@@ -61,6 +61,14 @@
     <title>jsys局旅行</title>
   </head>
   <body>
+    <!--loading-->
+    <div id="loading">
+      <div>
+        <h2 class="subtitle">jsys</h2>
+        <h1 class="title">#局旅行</h1>
+      </div>
+    </div>
+    <!--loading-->
     <!--header-->
     <header class="header">
       <a href="{{ config.base_url }}/" class="title">jsys局旅行</a>
@@ -78,9 +86,18 @@
     </footer>
     <!--footer-->
     <script type="module">
+      // loadingの制御
+      const loading = window.document.getElementById("loading");
+      function loadingAnimation() {
+        loading.classList.add("loaded");
+      }
+      window.addEventListener("load", loadingAnimation);
+      // mermaid
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true, theme: "light" });
-      document.getElementById("year").textContent = new Date().getFullYear();
+      // footerの年を更新
+      window.document.getElementById("year").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
