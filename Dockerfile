@@ -1,8 +1,8 @@
 FROM ghcr.io/getzola/zola:v0.17.1 as builder
 
 LABEL version="0.0.1"
-LABEL descripttion="Ultra-Coins Blog"
-LABEL maintainer="Ultra-Coins"
+LABEL descripttion="jsys travel blog"
+LABEL maintainer="sohosai"
 
 COPY . /project
 WORKDIR /project
