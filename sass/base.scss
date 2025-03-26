@@ -232,6 +232,13 @@ body {
       font-size: 1.1em;
       font-weight: 400;
     }
+    strong {
+      font-weight: 700;
+      background: linear-gradient(transparent 50%, #ffdc7d 50%);
+    }
+    em {
+      font-style: italic;
+    }
     blockquote {
       background-color: #c5c5c5;
       margin: 0;
