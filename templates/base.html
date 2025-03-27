@@ -73,10 +73,9 @@
     <!--footer-->
     <script type="module">
       // loadingの制御
-      window.addEventListener(
-        "load",
-        window.document.getElementById("loading")?.classList.add("loaded")
-      );
+      window.addEventListener("load", () => {
+        window.document.getElementById("loading")?.classList.add("loaded");
+      });
       // mermaid
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true, theme: "light" });
