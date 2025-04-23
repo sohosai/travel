@@ -1,4 +1,4 @@
-FROM ghcr.io/getzola/zola:v0.17.1 as builder
+FROM ghcr.io/getzola/zola:v0.20.0 as builder
 
 LABEL version="0.0.1"
 LABEL descripttion="jsys travel blog"
