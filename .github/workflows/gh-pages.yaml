@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      - name: Check Articles
+        run: nix develop --command bash -c "zola check"
       - name: Convert base_url for gh-pages
         run: sed -i '2 s/base_url = "\/"/base_url = "https:\/\/sohosai.github.io\/travel"/g' config.toml
       - name: Show config.toml
